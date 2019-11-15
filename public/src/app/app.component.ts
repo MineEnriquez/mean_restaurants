@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
     private _router: Router
   ) {}
   ngOnInit(){
-    this._router.navigate(['/retrieveall']);
+    this._router.navigate(['/restaurants']);
 
   }
 

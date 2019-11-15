@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RetrieveallComponent } from './retrieveall/retrieveall.component';
+import { NewrestaurantComponent } from "./newrestaurant/newrestaurant.component";
+
 // import { BetaComponent } from './beta/beta.component';
 // import { GammaComponent } from './gamma/gamma.component';
 // import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
-  { path: 'retrieveall',component: RetrieveallComponent },
-
+  { path: 'restaurants',component: RetrieveallComponent },
+  { path: 'restaurants/new',component: NewrestaurantComponent },
   // { path: 'beta',component: BetaComponent },
 
   // // use a colon and parameter name to include a parameter in the url
