@@ -1,4 +1,5 @@
 const Restaurants = require('../controllers/ctrl_restaurants');
+var path = require('path');
 
 module.exports = function (app) {
     app.post('/e2etest', (req, res) => {Restaurants.e2etest(req, res);});
@@ -15,4 +16,7 @@ module.exports = function (app) {
     
     // Enabling Angular routes:
     app.get("*");
+    app.all("*", (req,res,next) => {
+        res.sendFile(path.resolve("./public/dist/public/index.html"))
+    });
 }
